@@ -18,15 +18,15 @@ print("-Morse Code Translator-")
 print("Option1: Translate English to Morse code")
 print("Option2: Translate Morse Code to English")
 
-option = input("\nEnter an option: ")
+option = input("\nEnter an option (1 or 2): ")
 
+#Option 1: Translate English to Morse Code 
 if option == "1":
-    text = input("Enter text: ").strip()
-    morse = ""
+    text = input("Enter a text: ").strip()
+#converting each char to morse code in library
+    morse = "".join(morse_code.get(char.upper(), "?")for char in text)
+    print("Morse Code:", morse)  
 
-  for char in text:
-        morse += morse_code.get(char.upper(), "?") + " "  # Add space between Morse symbols
-
-    print(morse.strip())  # Strip extra space at the end
-
-
+elif option == "2":
+    morse = input("Enter Morse code: ").strip()
+    text = ""
