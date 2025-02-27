@@ -33,16 +33,16 @@ while True:
     elif option == "2":
         morse = input("Enter Morse code: ").strip()
         text = ""
+        morse_dict = {v: k for k, v in morse_code.items()}  # Reverse dictionary
+            text = "".join(morse_dict.get(part, "?") for part in morse.split(" "))
+
     else:
             print("Invalid option! Try again.")
             continue 
-
-        morse_dict = {v: k for k, v in morse_code.items()}  # Reverse dictionary
-            text = "".join(morse_dict.get(part, "?") for part in morse.split(" "))
         
             print("English Text:", text)
     #Ask for another trial
-     again = input("\nDo you want to try again? (y/n): ").strip().lower()
-        if again != 'y':
-            print("Exiting the Morse code translator. Goodbye!")
+            again = input("\nDo you want to try again? (y/n): ").strip().lower()
+            if again != 'y':
+             print("Exiting the Morse code translator. Goodbye!")
             break
