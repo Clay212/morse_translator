@@ -17,3 +17,16 @@ morse_code = {
 
 print("Option1: Translate English to Morse code")
 print("Option2: Translate Morse Code to English")
+
+option = input("\nEnter an option: ")
+
+if option == "1":
+    text = input("Enter text: ").strip()
+    morse = ""
+    
+    for char in text: 
+    morse += table[char.upper()]
+    
+    print(morse)
+
+
