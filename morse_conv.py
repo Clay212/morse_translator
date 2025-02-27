@@ -36,3 +36,7 @@ elif option == "2":
         text = "".join(morse_dict.get(part, "?") for part in morse.split(" "))
         
         print("English Text:", text)
+#Ask for another trial
+ again = input("\nDo you want to try again? (y/n): ").strip().lower()
+    if again != 'y':
+        print("Exiting the Morse code translator. Goodbye!")
