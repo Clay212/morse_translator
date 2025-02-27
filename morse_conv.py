@@ -14,7 +14,7 @@ morse_code = {
     ";": "-*-*-*", "=": "-***-", "+": "*-*-*", "-": "-****-", "_": "**--*-",
     '"': "*-**-*", "$": "***-**-", "@": "*--*-*"
 }
-
+print("-Morse Code Translator-")
 print("Option1: Translate English to Morse code")
 print("Option2: Translate Morse Code to English")
 
@@ -23,10 +23,10 @@ option = input("\nEnter an option: ")
 if option == "1":
     text = input("Enter text: ").strip()
     morse = ""
-    
-    for char in text: 
-    morse += table[char.upper()]
-    
-    print(morse)
+
+  for char in text:
+        morse += morse_code.get(char.upper(), "?") + " "  # Add space between Morse symbols
+
+    print(morse.strip())  # Strip extra space at the end
 
 
